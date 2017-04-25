@@ -5,7 +5,7 @@ describe('chop test', () => {
 	it('pass!', () => {
 		expectNotContains(3, []);
 		expectNotContains(3, [1]);
-		expectContains(1, [1], 1);
+		expectContains(1, [1], 0);
 
 		expectContains(1, [1, 3, 5], 0);
 		expectContains(3, [1, 3, 5], 1);
@@ -27,9 +27,9 @@ describe('chop test', () => {
 });
 
 const expectContains = (value, array, index) => {
-	expect(chop(value, array)).to.be.equal(index);
+	expect(chop(value, array)).to.equal(index);
 };
 
 const expectNotContains = (value, array) => {
-	expect(chop(value, array)).to.be.equal(-1);
+	expect(chop(value, array)).to.equal(-1);
 };
