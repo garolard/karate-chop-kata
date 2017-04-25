@@ -5,7 +5,7 @@ describe('chop test', () => {
 	it('pass!', () => {
 		expectNotContains(3, []);
 		expectNotContains(3, [1]);
-		expectContains(1, [1], 1);
+		expectContains(1, [1], 0);
 
 		expectContains(1, [1, 3, 5], 0);
 		expectContains(3, [1, 3, 5], 1);
